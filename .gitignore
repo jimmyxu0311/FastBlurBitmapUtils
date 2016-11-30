@@ -34,7 +34,12 @@ captures/
 
 # Intellij
 *.iml
-.idea/workspace.xml
+.idea/
 
 # Keystore files
 *.jks
+
+app/.externalNativeBuild/
+app/build/
+app/src/test/
+app/src/androidTest/

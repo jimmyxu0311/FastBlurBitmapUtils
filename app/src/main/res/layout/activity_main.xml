@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="utils.sq.org.fastblurbitmaputil.MainActivity">
+
+   <ImageView
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:src="@mipmap/ic_launcher"
+       android:id="@+id/fastblur_ImageView"/>
+
+   <ImageView
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:src="@mipmap/ic_launcher"
+       android:layout_toRightOf="@id/fastblur_ImageView"
+       android:id="@+id/fastblur_ImageView1"/>
+
+   <ImageView
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:src="@mipmap/ic_launcher"
+       android:layout_below="@id/fastblur_ImageView"
+       android:id="@+id/fastblur_ImageView2"/>
+
+   <ImageView
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:src="@mipmap/ic_launcher"
+       android:layout_below="@id/fastblur_ImageView"
+       android:layout_toRightOf="@id/fastblur_ImageView2"
+       android:id="@+id/fastblur_ImageView3"/>
+</RelativeLayout>
