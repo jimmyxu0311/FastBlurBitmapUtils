@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 import org.sq.fastblur.FastBlur;
 import org.sq.fastblur.FastBlurUtils;
+import org.sq.utils.LogUtils;
 
 public class MainActivity extends Activity {
     public static final String TAG = "MainActivity";
@@ -32,7 +33,7 @@ public class MainActivity extends Activity {
                 long startTime = SystemClock.currentThreadTimeMillis();
                 Bitmap blurBitmap = FastBlur.blurJava(originBitmap, 25, false);
                 long endTime = SystemClock.currentThreadTimeMillis();
-                Log.d(TAG, "time " + (endTime - startTime));
+                LogUtils.d(TAG, "time " + (endTime - startTime));
 
                 fastBlurImageView.setImageBitmap(blurBitmap);
             }
@@ -47,7 +48,7 @@ public class MainActivity extends Activity {
                 long startTime = SystemClock.currentThreadTimeMillis();
                 Bitmap blurBitmap = FastBlur.blurNatively(originBitmap, 25, false);
                 long endTime = SystemClock.currentThreadTimeMillis();
-                Log.d(TAG, "time " + (endTime - startTime));
+                LogUtils.d(TAG, "time " + (endTime - startTime));
 
                 fastBlurImageView1.setImageBitmap(blurBitmap);
             }
@@ -62,7 +63,7 @@ public class MainActivity extends Activity {
                 long startTime = SystemClock.currentThreadTimeMillis();
                 Bitmap blurBitmap = FastBlur.blurNativelyPixels(originBitmap, 25, false);
                 long endTime = SystemClock.currentThreadTimeMillis();
-                Log.d(TAG, "time " + (endTime - startTime));
+                LogUtils.d(TAG, "time " + (endTime - startTime));
 
                 fastBlurImageView2.setImageBitmap(blurBitmap);
             }
@@ -77,7 +78,7 @@ public class MainActivity extends Activity {
                 long startTime = SystemClock.currentThreadTimeMillis();
                 Bitmap blurBitmap = FastBlur.blurRenderScript(MainActivity.this, originBitmap, 25, false);
                 long endTime = SystemClock.currentThreadTimeMillis();
-                Log.d(TAG, "time " + (endTime - startTime));
+                LogUtils.d(TAG, "time " + (endTime - startTime));
 
                 fastBlurImageView3.setImageBitmap(blurBitmap);
             }
