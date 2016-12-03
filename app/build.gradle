@@ -14,10 +14,17 @@ android {
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled  true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets{
+        main {
+            jni.srcDirs = []
         }
     }
 
